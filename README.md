@@ -10,6 +10,10 @@ or
 
 ` yarn add react-encrypted-input `
 
+## Demo
+
+[demo]()
+
 ## Usage
 
 ```
