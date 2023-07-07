@@ -6,10 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode development",
-    "build:prod": "webpack --mode production",
+    "build": "webpack --mode production",
     "deploy": "gh-pages -d dist",
-    "publish-demo": "npm run build:prod && npm run deploy"
+    "publish-demo": "npm run build && npm run deploy"
   },
   "author": "",
   "license": "ISC",

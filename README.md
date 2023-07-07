@@ -10,9 +10,11 @@ or
 
 ` yarn add react-encrypted-input `
 
+
 ## Demo
 
-[demo]()
+[demo](https://lingdongyuanjia.github.io/react-encrypted-input-demo/)
+
 
 ## Usage
 
