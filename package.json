@@ -1,21 +1,27 @@
 {
   "name": "react-encrypted-input",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
+    "compile": "npx babel src --out-dir lib",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d dist",
     "publish-demo": "npm run build && npm run deploy"
   },
   "author": "",
   "license": "ISC",
+  "keywords": [
+    "react",
+    "encrypted-input"
+  ],
   "devDependencies": {
+    "@babel/cli": "^7.22.6",
+    "@babel/core": "^7.22.8",
     "@babel/preset-env": "^7.22.6",
     "@babel/preset-react": "^7.22.5",
-    "babel-core": "^6.26.3",
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
