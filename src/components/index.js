@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import './index.scss';
-import showIconDefault from '../assets/eye.png'
-import closeIconDefault from '../assets/close-eye.png'
 
+const showIconDefault = 'https://s1.ax1x.com/2023/07/09/pCgrubq.png'
+const closeIconDefault = 'https://s1.ax1x.com/2023/07/09/pCgrQaV.png'
 // 保存光标位置
 let selectionStart = 0,
     selectionEnd = 0
