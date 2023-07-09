@@ -42,3 +42,10 @@ import EncryptedInput from 'react-encrypted-input'
 |  style     | object |  {}              | the component style,if you want to change input's style ,you can set style = {input:{fontSize:'20px'}}；If you want to change icon's style,you can set style = {icon:{width:'100px',border:'1px solid red'}}  |
 
 
+## Functions
+| Name       |  Description                 | Type               | 
+|  ----      |  ----                        | ----               |
+| onChange() |  Callback when input changes,the first param is input value,the second param is encrypted input | (value,mValue)=>{} |
+
+
+
