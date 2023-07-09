@@ -34,6 +34,7 @@ import EncryptedInput from 'react-encrypted-input'
 
 | Property   | Type   | Default          |  Description |
 |  ----      | ----   |  ----            |  ----        |
+|  mode      | string |  'encrypted'     | mode for input, value is encrypted or plain.if mode is encrypted ,the input  will show encrypted  |
 |  initValue | string |  ''              | default value for input   |
 |  front     | number |  0               | number of digits displayed before the string,eg: if the input value is '123456',front is 2, this input value will show 12****   |
 |  end       | number |  0               | number of digits displayed after the string,eg: if the input value is '123456',end is 2, this input value will show 1234**  |

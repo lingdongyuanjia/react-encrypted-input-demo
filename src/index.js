@@ -30,7 +30,7 @@ const App = () => {
             {renderTable()}
             <div className='example'>
                 <div className='title'>Example</div>
-                <EncryptedInput initValue={initValue} front="1" end="2" onChange={(d1, d2) => { console.log(d1, d2) }} />
+                <EncryptedInput initValue="我爱你啊梦" front="1" end="2" onChange={(d1, d2) => { console.log(d1, d2) }} mode="plain" />
             </div>
         </div>
 

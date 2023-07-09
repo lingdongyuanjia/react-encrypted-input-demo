@@ -12,10 +12,9 @@ export default class EncryptedInput extends Component {
         super(props)
         this.inputRef = React.createRef()
         this.state = {
-            show: 0,
+            show: this.props.mode === 'plain' ? 1 : 0,
             value: '',
             mValue: '',
-
         }
     }
 
@@ -24,14 +23,17 @@ export default class EncryptedInput extends Component {
     }
 
     init = () => {
-        const { show, value, mValue } = this.state
         if (this.props.initValue) {
             this.setState({
-                initValue: value
+                value: this.props.initValue,
+                mValue: this.handleFormat(this.props.initValue)
             }, () => {
-                this.handleFormat(this.props.initValue)
+                if (this.state.show) {
+                    this.inputRef.current.value = this.state.value
+                } else {
+                    this.inputRef.current.value = this.state.mValue
+                }
             })
-
         }
     }
 
@@ -51,7 +53,7 @@ export default class EncryptedInput extends Component {
             str = value
         } else {
             str = value.slice(0, Number(front)) + '*'.repeat(star) + value.slice(Number(front) + star)
-        }
+        } ``
         this.setState({
             mValue: str
         })
@@ -93,6 +95,15 @@ export default class EncryptedInput extends Component {
                 this.props.onChange(value, mValue)
             }
         })
+    }
+    handleSetValue() {
+        if (this.inputRef.current) {
+            if (this.state.show) {
+                this.inputRef.current.value = this.state.value
+            } else {
+                this.inputRef.current.value = this.state.mValue
+            }
+        }
     }
     // 主要为了校验是否在进行中文输入
     composition = e => {
