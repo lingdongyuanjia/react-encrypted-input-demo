@@ -17,7 +17,7 @@ const webpackConfigDev = {
     },
 
     output: {
-        path: resolve('../lib'),
+        path: resolve('../dist'),
         filename: 'index.js',
     },
 
