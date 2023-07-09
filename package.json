@@ -1,14 +1,14 @@
 {
   "name": "react-encrypted-input",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "npx babel src --out-dir lib --copy-files",
     "deploy": "gh-pages -d dist",
-    "publish-demo": "npm run build && npm run deploy",
+    "publish-demo": "npm run build:demo && npm run deploy",
     "build": "webpack --config ./scripts/webpack.prod.config.js",
+    "build:demo":"webpack --config ./scripts/webpack.dev.config.js",
     "start": "webpack-dev-server --config ./scripts/webpack.dev.config.js"
   },
   "author": "",
